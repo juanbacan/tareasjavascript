@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornadas Deportivas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+
+                            <div class="form-group">
+                                <input type="text" id="task-title" class="form-control" placeholder="Task Title" placeholder="Task Title" autofocus />
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="task-description" rows="3" class="form-control" placeholder="Task Description"></textarea>
+                            </div>
+                            <button class="btn btn-primary" id="btn-task-form">
+                                Save
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="tasks-container"></div>
+
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBsFMO_zC_koaucF8i3bMk-viS7zCum2gg",
+            authDomain: "jornadas-deportivas.firebaseapp.com",
+            databaseURL: "https://jornadas-deportivas.firebaseio.com",
+            projectId: "jornadas-deportivas",
+            storageBucket: "jornadas-deportivas.appspot.com",
+            messagingSenderId: "135176324061",
+            appId: "1:135176324061:web:a26416768a38410345ec34"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
